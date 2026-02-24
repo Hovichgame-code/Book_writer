@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Writing Application</title>
+    <style>
+        body {
+            background-color: #1a1a2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 25%;
+            background-color: #162447;
+            padding: 20px;
+        }
+        .editor {
+            width: 50%;
+            padding: 20px;
+            border: 1px solid #0f3460;
+            height: 80vh;
+            overflow-y: auto;
+            background-color: #0f3460;
+        }
+        .bottom-panel {
+            width: 25%;
+            background-color: #162447;
+            padding: 20px;
+        }
+        .button {
+            background-color: #0f3460;
+            border: none;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #1f1f2d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Book Structure</h2>
+            <ul>
+                <li>Chapter 1</li>
+                <li>Chapter 2</li>
+                <li>Chapter 3</li>
+                <li>Chapter 4</li>
+            </ul>
+            <button class="button">Add Chapter</button>
+            <button class="button">Delete Chapter</button>
+        </div>
+        <div class="editor">
+            <h1>Text Editor</h1>
+            <textarea rows="20" style="width: 100%; border: none; background: #0f3460; color: white; font-size: 18px;"></textarea>
+            <button class="button">Save</button>
+            <button class="button">Load</button>
+        </div>
+        <div class="bottom-panel">
+            <h2>Chapter Details</h2>
+            <p id="chapter-details">Details about the selected chapter will appear here.</p>
+            <h3>Settings</h3>
+            <label for="sound-settings">Keyboard Sounds:</label>
+            <select id="sound-settings">
+                <option value="on">On</option>
+                <option value="off">Off</option>
+            </select>
+            <button class="button">Manage Files</button>
+        </div>
+    </div>
+    <script>
+        // JavaScript functionality can be added here
+        document.getElementsByClassName('button')[0].onclick = function() {
+            alert('Chapter added');
+        };
+        document.getElementsByClassName('button')[1].onclick = function() {
+            alert('Chapter deleted');
+        };
+        document.getElementsByClassName('button')[2].onclick = function() {
+            alert('File saved');
+        };
+        document.getElementsByClassName('button')[3].onclick = function() {
+            alert('File loaded');
+        };
+        document.getElementsByClassName('button')[4].onclick = function() {
+            alert('File management opened');
+        };
+    </script>
+</body>
+</html>
